@@ -8,10 +8,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Document(collation = "employees")
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Document("employees")
 public class EmployeeEntity {
 
 	@Id

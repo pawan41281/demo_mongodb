@@ -37,7 +37,7 @@ public class EmployeeController {
 	
 	@GetMapping("")
 	@Operation(summary = "Get all employees", description = "Fetches all employees from database")
-	@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasRole('ADMIN') or hasRole('USER')")
 	public ResponseEntity<ApiResponse<List<EmployeeEntity>>> findAll() {
 		List<EmployeeEntity> list = employeeService.list();
 		Map<String, Integer> map = new HashMap<>();
