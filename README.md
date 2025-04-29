@@ -10,7 +10,7 @@
 
 4. docker run -d --name mongodb --network employeeapi-network -p 27017:27017 mongodb/mongodb-community-server:latest
 
-5. docker run --rm --name employeeapi --network employeeapi-network -p 8081:8081 pawan41281/employeeapi:latest
+5. docker run --rm --name employeeapi --network employeeapi-network -p 8081:8081 -v d:/data/mongodb:/data/db pawan41281/employeeapi:latest
 
 **Create Following Permissions**
 
